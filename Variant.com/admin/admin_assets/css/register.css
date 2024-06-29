@@ -1,0 +1,150 @@
+/* ********************************************************************************************** */
+/* THIS FILE CONTAINES CSS OF LOGIN PAGE , FORGOT PASSWORD PAGE BOTH  */
+/* ********************************************************************************************** */
+
+.main-wrapper {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+/***************** VECTOR IMAGE ****************/
+.main-wrapper .vecotor_img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-wrapper .vecotor_img img {
+    position: sticky;
+    width: 70%;
+}
+.main-wrapper.login .vecotor_img img {
+    position: sticky;
+    width: 80%;
+}
+
+/***************** FORM SECTION ****************/
+
+/*************** LOGIN FORM ***************/
+.login .login_form .container {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #ebebeb;
+    box-shadow: .3em .3em .6em 0em #80808070;
+}
+
+/*************** REGISTER & LOGIN FORM ***************/
+.login_form {
+    padding: 1rem 20% 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.login_form .container {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: #f4f4f4;
+    box-shadow: .3em .3em .6em 0em #80808070;
+}
+
+.login_form .container .heading {
+    width: fit-content;
+    margin: auto;
+    font-weight: 900;
+    font-size: 1.4rem;
+    -webkit-text-stroke: 1px;
+}
+
+.login_form .container .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease-in-out;
+}
+.login_form .container .col .err{
+    font-size: .8rem;
+    color: #c01717;
+    align-self: self-start;
+}
+
+.login_form .container .col .input_box {
+    width: 100%;
+    margin: .8rem;
+    border: 0;
+    border-bottom: 2px solid #4f4f4f8a;
+    background: transparent;
+    text-transform: capitalize;
+    padding: .6rem .8rem;
+    border-radius: 5rem;
+    outline-color: #377ec54b;
+    transition: all .3s ease-in-out;
+}
+
+.login_form .container .col input:hover {
+    scale: 1.04;
+}
+
+.login_form .container .col input:focus {
+    outline: 2px solid #377ec54b;
+    outline: 2px solid #3937c54b;
+    border-color: transparent;
+    box-shadow: .1em .1em .3em 0 #68686890;
+    scale: 1.04;
+}
+
+.login_form .container .btn-wrepper {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.login_form .container .btn-wrepper .btn {
+    width: 90%;
+    margin: auto;
+    border-radius: 5rem;
+}
+
+.login_form .container .cta-link {
+    width: 100%;
+    font-size: .9rem;
+    color:#2f2f2f;
+}
+
+.login_form .container .cta-link p {
+    width: fit-content;
+    margin: auto;
+}
+
+.login_form .container .cta-link a {
+    color: rgb(67, 129, 244);
+}
+
+
+/* SUCCSESS MASSAGE */
+
+.data_info_alert {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    bottom: -10%;
+    left: 50%;
+    justify-content: center;
+    text-transform: capitalize;
+    transform: translateX(-50%);
+    transition: all .3s ease;
+}
+
+.data_info_alert.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    bottom: 0;
+}

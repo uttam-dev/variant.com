@@ -1,0 +1,262 @@
+/* utility  */
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../fonts/Montserrat.ttf");
+}
+
+@font-face {
+  font-family: vonique;
+  src: url("../fonts/Vonique\ Bold.ttf");
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("../fonts/Roboto-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  --bg-color: #222831;
+  --text-color: #eeeeee;
+  --global-padding-x: 5rem;
+  --global-padding-y: 0.5rem;
+
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Montserrat;
+  scroll-behavior: smooth;
+  scroll-padding-top: 12rem;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #d6d6d6;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #6d6d6d; 
+  height: 50px;
+}
+
+
+/* anchor tag */
+a,
+a:hover {
+  text-decoration: none;
+  color: unset;
+}
+
+/* list tag */
+li {
+  list-style: none;
+}
+
+
+/* for selection  */
+::selection {
+  color: rgb(255, 255, 255);
+  background: #222831;
+}
+
+/* under line for text */
+.text_underline {
+  position: relative;
+  width: max-content;
+}
+
+.text_underline::after {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 2px;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #777d87;
+  background: #d8dbe1;
+  border-radius: 100%;
+}
+
+/* Scrolling Control buttons */
+.btn_container {
+  position: relative;
+}
+
+.btn_container:hover .btn {
+  opacity: 1;
+}
+
+.btn_container .btn:hover {
+  background: rgb(79, 78, 78);
+  box-shadow: 0 0 1em grey, inset 0 0 1em #302d2d;
+  border: 1px solid white;
+}
+
+.btn_container .btn {
+  z-index: 10000;
+  opacity: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #6b6a6a;
+  background: rgb(46, 45, 45);
+  color: #fff;
+  transform: translateY(-50%);
+  box-shadow: 0 0 1em grey;
+  transition: 0.3s all;
+}
+
+.btn_container .btn.left_button {
+  left: 2rem;
+}
+
+.btn_container .btn.right_button {
+  right: 2rem;
+}
+
+/* PRODUCTS CARD FOR  */
+.pro_card {
+  position: relative;
+  margin: auto;
+  color: #302d2d;
+  background: #fff;
+  box-shadow: 0.4em 0.4em 0.7em rgba(0, 0, 0, 0.062);
+  border: 2px solid #3535350e;
+}
+
+.pro_card .pro_img {
+  position: relative;
+  overflow: hidden;
+  width: 18rem;
+  height: 23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pro_card .pro_img img {
+  /* width: 100%; */
+  height: 100%;
+  margin: auto;
+  object-fit: contain;
+  transition: all 0.4s ease-in-out;
+}
+
+.pro_card .pro_img img:hover {
+  scale: 1.1;
+}
+
+.pro_card .pro_text {
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 0.5rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pro_card .pro_text .pro_title {
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
+  border-bottom: 2px solid rgba(130, 129, 129, 0.466);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.pro_card .pro_text .pro_catagory {
+  color: #656565;
+}
+
+.pro_card .pro_text .pro_price {
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 0.4rem;
+}
+
+.pro_card .pro_text .pro_price div {
+  display: flex;
+  font-weight: bold;
+}
+
+.pro_card .pro_text .pro_price .org_price {
+  font-size: 1rem;
+  color: #656565;
+  text-decoration: line-through;
+}
+
+.pro_card .pro_text .pro_price .discount {
+  font-size: 1rem;
+  color: #26d153;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  margin-left: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* wishlist butaton icon */
+
+[wishlist_icon] {
+  width: 2.6rem;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 1.2rem;
+  background: #8a8a8ace;
+  padding: .5rem;
+  color: #fff;
+  border-radius: 50%;
+  transition: 0.4s all;
+  border: none;
+  outline: none;
+  z-index: 10;
+}
+
+[wishlist_icon]:hover {
+  animation: wishlist infinite 0.5s;
+}
+
+[wishlist_icon].active {
+  color: rgb(255, 255, 255);
+  box-shadow: inset 1em 1em 0.3em 1em rgb(228, 84, 84),
+    inset -1em -1em 0.3em 1em rgb(228, 84, 84);
+  background-color: rgb(228, 84, 84);
+  animation: wishlist 0.5s;
+  display: block;
+}
+
+@keyframes wishlist {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}

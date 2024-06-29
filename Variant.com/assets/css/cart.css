@@ -1,0 +1,248 @@
+/* CART NAV  */
+.sub-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid #24242461;
+  text-transform: capitalize;
+}
+
+.sub-nav .sub-nav-iteam {
+  font-weight: 900;
+  margin-inline: 2rem;
+  width: max-content;
+  font-size: 1.2rem;
+  color: #393939;
+  padding: 0.5rem 0.5rem;
+  border-radius: 5px 5px 0 0;
+  outline: 2px solid white;
+  box-shadow: 0 0 0 0 #737272;
+  transition: all 0.3s ease;
+}
+
+.sub-nav .sub-nav-iteam:hover {
+  box-shadow: 0 0.2em 0 0 #737272;
+  transition: all 0.3s ease;
+}
+
+.sub-nav .sub-nav-iteam a {
+  width: 100%;
+  height: 100%;
+}
+
+.sub-nav .sub-nav-iteam:hover {
+  color: #737272;
+}
+
+.sub-nav .sub-nav-iteam.active {
+  color: #3790e4 !important;
+  box-shadow: 0 0.2em 0 0 #369af8;
+  transition: all 0.3s ease;
+}
+
+.sub-nav .sub-nav-iteam.active:hover {
+  color: #2767a3 !important;
+  box-shadow: 0 0.3em 0 0 #2e79c0;
+}
+
+/* FOR EMPTY CART */
+.empty-cart {
+  width: 100vw;
+  height: 90vh;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.empty-cart h3 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+}
+.empty-cart p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 100%;
+  margin: 1rem auto 0 auto;
+}
+
+/* ********* MAIN CART CONTENT ************* */
+
+.container-fluid {
+  display: flex;
+  align-items: start;
+  background: #f5f5f5;
+  text-transform: capitalize;
+  min-width: 90vh;
+}
+
+.left-wrapper {
+  margin-top: 2rem;
+  width: 75%;
+  padding: 0 2rem;
+}
+
+.right-wrapper {
+  position: sticky;
+  top: 4rem;
+  width: 25%;
+  height: 100%;
+  padding: 2rem;
+}
+
+/* **************** CART CONTAINER **************** */
+
+/* **************** CART HEADING **************** */
+.cart_wrapper .cart_heading {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #393939;
+  border-bottom: 1px solid #878787;
+  padding-bottom: 0.5rem;
+}
+
+.cart_wrapper .product {
+  width: 15%;
+}
+
+.cart_wrapper .desc {
+  width: 40%;
+}
+
+.cart_wrapper .price {
+  width: 12.5%;
+  text-align: end;
+}
+
+.cart_wrapper .qty {
+  width: 20%;
+  text-align: center;
+}
+
+.cart_wrapper .total {
+  width: 12.5%;
+  text-align: end;
+}
+
+/* **************** CARTS CSS **************** */
+
+.cart_iteam {
+  padding: 1rem 0;
+  display: flex;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #8787879d;
+}
+
+.cart_iteam .cart_img img {
+  height: 9rem;
+}
+
+.cart_iteam .cart_img {
+  width: 15%;
+}
+
+.cart_iteam .pro_detail {
+  width: 40%;
+  text-wrap: nowrap;
+  line-height: 2rem;
+  font-weight: 600;
+  padding-right: 1rem;
+}
+
+.cart_iteam .pro_price {
+  width: 12.5%;
+  text-align: end;
+}
+
+.cart_iteam .pro_qty {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.cart_iteam .pro_qty .pro_qty_control {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  border: 1px solid #878787;
+  padding: 0.3rem 1rem;
+  background: rgba(255, 255, 255, 0.738);
+}
+
+.cart_iteam
+  .pro_qty
+  .pro_qty_control
+  input[type="number"]::-webkit-inner-spin-button,
+.cart_iteam
+  .pro_qty
+  .pro_qty_control
+  input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.cart_iteam .pro_qty .pro_qty_control button:focus-visible,
+.cart_iteam .pro_qty .pro_qty_control button:active {
+  outline: none;
+  border: none;
+}
+
+.cart_iteam .pro_qty .pro_qty_control button {
+  font-size: 1.3rem;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.cart_iteam .pro_qty .pro_qty_control input {
+  border: none;
+  outline: none;
+  width: 50%;
+  text-align: center;
+  background: transparent;
+}
+
+.cart_iteam .pro_total {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 12.5%;
+  text-align: end;
+}
+
+.cart_iteam .cart_remove {
+  align-self: self-end;
+  color: #3a3a3a;
+}
+
+/* **************** SUB TOTAL CONTAINR **************** */
+
+.sub_total_wrapper {
+  padding: 1.2rem;
+  border-radius: 0.2rem;
+  background: #ffffffe2;
+  box-shadow: 0.2em 0.2em 0.7em #5454545c;
+}
+
+.sub_total_wrapper .delivery_info {
+  font-size: 0.9rem;
+  color: #191919;
+}
+
+.sub_total_wrapper .place_order_btn {
+  width: 100%;
+  margin: auto;
+  border-radius: 5rem;
+  justify-content: center;
+}

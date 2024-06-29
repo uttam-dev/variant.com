@@ -1,0 +1,153 @@
+footer{
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 3rem ;
+    z-index: 1000;
+    text-transform: capitalize;
+}
+
+
+/* COPYRIGHT AND LOGO */
+footer .copyrights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(155, 155, 155);
+    gap: 1rem;
+    font-size: 1rem;
+}
+footer .copyrights .logo {
+    width: 80px;
+}
+
+footer .logo img{
+    width: 100%;
+}
+
+
+
+/* CONTACT SECTION WITH SOCIAL MEDIA ICONS */
+footer .contacts{
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: beige;
+    gap: 1rem;
+}
+footer .contacts p{
+    margin-top: 1rem;
+}
+
+footer .contacts .cta_links{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 2rem;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
+footer .contacts .cta_links .icon{
+    transition: all .3s ease-in-out;
+    position: relative;
+}
+
+footer .contacts .cta_links .mail-icon-link{
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+    grid-column: 1/ span 5;
+}
+
+footer .contacts .cta_links .mail-icon-link .mail-id{
+    margin: 0;
+    font-size: .9rem;
+    text-transform: lowercase;
+}
+
+/* footer .contacts .cta_links .icon:not(.mail-icon)::after{
+    content: attr(data-media-name);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .8rem;
+    text-wrap: nowrap;
+    opacity: 0;
+    font-family: 'Trebuchet MS';
+    transition: all .3s ease-in-out;
+}
+
+footer .contacts .cta_links .icon:not(.mail-icon):hover::after{
+    opacity: 1;
+    top:140%;
+    color: white;
+} */
+footer .contacts .cta_links .icon-link{
+    position: relative;
+}
+
+footer .contacts .cta_links .icon-link:not(.mail-icon)::after{
+    content: attr(data-media-name);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .8rem;
+    text-wrap: nowrap;
+    opacity: 0;
+    font-family: 'Trebuchet MS';
+    transition: all .3s ease-in-out;
+}
+
+footer .contacts .cta_links .icon-link:not(.mail-icon):hover::after{
+    opacity: 1;
+    bottom:-20%;
+    color: white;
+}
+
+footer .contacts .cta_links .icon-link:hover .icon:not(.mail-icon) {
+    color: #d1d1d1;
+    scale: 1.1;
+    translate:0 -.7rem ;   
+    box-shadow: .5em .5em 1em 0 rgba(0, 0, 0, 0.299);
+}
+
+
+
+/* FEEDBACK FORM  */
+
+footer .container{
+    margin-left: auto;
+    width: 80%;
+}
+
+footer .container #feed_email{
+    text-transform: lowercase;
+}
+
+footer .container .feed-input,footer .container .feed-btn{
+    color: #fff;
+    margin-left: auto;
+    width: 100%;
+    background: transparent;
+    border: 2px solid gray;
+    padding: .5rem;
+    transition: all .2s ease;
+}
+
+footer .container .feed-input:focus,footer .container .feed-input:focus-visible{
+    border: 2px solid rgb(255, 255, 255);
+    outline: none;
+    }
+
+    footer .container .feed-btn{
+        width: fit-content;
+        padding: .6rem 1rem;
+        transition: all .3s ease;
+    }
+    footer .container .feed-btn:hover{
+        background: #fff;
+        color: #000;
+    }

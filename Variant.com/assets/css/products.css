@@ -1,0 +1,71 @@
+/* PRODUCTS  */
+
+#products {
+  min-height: 80vh;
+  background: #f5f5f5b6;
+}
+
+.heading_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem 0.5rem;
+  margin: 3rem 0 0;
+  border-bottom: 1px solid #5a5a5a8f;
+  text-transform: capitalize;
+}
+
+.heading_text .search_title {
+  position: relative;
+  width: max-content;
+  font-size: 1.3rem;
+  color: #363636;
+  padding-bottom: 0.5rem;
+}
+
+.heading_text .total_products {
+  font-size: 1rem;
+  color: #5d5d5d;
+}
+
+.products_wrapper {
+  padding: 3rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  row-gap: 5rem;
+}
+
+
+
+
+/* THIS FILE ALSO CONTAINE CSS OF WISHLIST */
+
+/* FOR EMPTY WISHLIST */
+
+.empty-wishlist {
+  width: 80vw;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+.empty-wishlist img {
+  width: 35vw;
+  mix-blend-mode: multiply;
+}
+
+.empty-wishlist h3 {
+  font-size: 2rem;
+  line-height: 2rem;
+  margin: 0;
+  padding: 0;
+  font-weight: 900;
+}
+.empty-wishlist p {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 18px;
+  line-height: 24px;
+  max-width: 100%;
+  margin: 1rem auto 0 auto;
+}
